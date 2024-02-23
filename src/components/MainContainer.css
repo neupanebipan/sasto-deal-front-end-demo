@@ -1,0 +1,138 @@
+.main {
+    padding: 12px;
+}
+
+.main > *:not(.full-width) {
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+.main > *:not(:first-child) {
+    margin-top: 18px;
+}
+img.banner {
+    display: block;
+    width: 100%;
+}
+
+.product-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.title-container {
+    margin-block: 34px 26px !important;
+}
+
+.title {
+    color: #5d4191;
+    font-weight: 900;
+    font-size: large;
+    margin: 0 !important;
+}
+
+.subtitle {
+    color: #5d4191;
+    font-weight: 500;
+    margin: 0 !important;
+}
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    grid-gap: 16px;
+}
+
+.product-card {
+    position: relative;
+    background-color: #ffffff;
+    border-radius: 6px;
+    padding: 12px;
+    height: 100%;
+    display: grid;
+    grid-template-areas:
+        "preview"
+        "description"
+        "action";
+    grid-template-rows: auto 1fr auto;
+    grid-gap: 12px;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 0px 1px;
+}
+
+.product-img {
+    display: block;
+    width: 100%;
+    height: 260px;
+    position: center;
+    object-fit: contain;
+    cursor: pointer;
+    grid-area: preview;
+}
+
+.product-wishlist {
+    position: absolute;
+    top: 4px;
+    right: 4px;
+    cursor: pointer;
+    grid-area: preview;
+    border-radius: 50%;
+    padding: 6px;
+    display: grid;
+    place-items: center;
+    transition:
+        color 100ms ease-in-out,
+        background-color 100ms ease-in-out;
+
+    &:hover {
+        background-color: #bb141a;
+        color: #ffffff;
+    }
+}
+
+.product-texts {
+    grid-area: description;
+}
+
+.product-action {
+    grid-area: action;
+}
+
+.label {
+    font-size: medium;
+    color: #5d4191;
+    font-weight: 500;
+    text-transform: uppercase;
+    margin-bottom: 6px;
+}
+
+.price {
+    font-size: large;
+    color: #5d4191;
+    font-weight: 500;
+}
+
+.product-action > button {
+    border-radius: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    color: #ffffff;
+    background-color: #5d4191;
+    gap: 12px;
+    padding: 10px 16px;
+    font-size: large;
+    font-weight: 500;
+    width: calc(100% - 14px);
+    margin-inline: auto;
+    cursor: pointer;
+    transition: background-color 200ms ease-in-out;
+
+    &:hover {
+        background-color: #43a69b;
+    }
+}
+
+.product-action > button > svg {
+    font-size: larger;
+}

@@ -1,0 +1,126 @@
+.container {
+    padding: 12px;
+}
+
+.container > *:not(.full-width) {
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+.container > *:not(:first-child) {
+    margin-top: 18px;
+}
+
+.product-container {
+    background-color: #ffffff;
+    display: grid;
+    grid-template-columns: 0.65fr 1fr;
+    grid-gap: 28px;
+    padding: 28px;
+    border-radius: 6px;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 0px 1px;
+}
+
+.preview-container {
+    border: 1px solid #efefef;
+    padding: 18px 12px;
+    border-radius: 6px;
+}
+
+.details-container > hr {
+    border-top: 1px solid #cccccc;
+}
+
+.details-container > hr:not(:first-child):not(:last-child) {
+    margin-block: 20px;
+}
+
+.product-label {
+    font-weight: 500;
+    font-size: larger;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.product-price {
+    font-weight: 600;
+    font-size: larger;
+    color: #5d4191;
+    margin-bottom: 8px;
+}
+
+.product-subtitle {
+    font-weight: 600;
+    font-size: medium;
+    margin-bottom: 8px;
+}
+
+.quantity-input {
+    display: inline-flex;
+    width: 140px;
+    justify-content: space-evenly;
+    align-items: center;
+    border: 1px solid #cccccc;
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+.quantity-input > span {
+    width: 40px;
+    display: grid;
+    place-items: center;
+}
+
+.quantity-input > button {
+    background-color: transparent;
+    display: grid;
+    place-items: center;
+    height: 30px;
+    width: 30px;
+    border: none;
+    line-height: 1;
+    cursor: pointer;
+}
+
+.quantity-input > button > svg {
+    font-size: large;
+}
+
+.product-description {
+    text-align: justify;
+    margin-bottom: 6px;
+}
+
+.product-sku {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.product-actions {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+}
+
+.product-actions > button {
+    border-radius: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    color: #ffffff;
+    background-color: #5d4191;
+    gap: 12px;
+    padding: 10px 16px;
+    font-size: large;
+    font-weight: 500;
+    width: calc(100% - 14px);
+    margin-inline: auto;
+    cursor: pointer;
+    transition: background-color 200ms ease-in-out;
+
+    &:hover {
+        background-color: #43a69b;
+    }
+}

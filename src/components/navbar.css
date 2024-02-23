@@ -1,0 +1,341 @@
+.navbar {
+    background-color: #ffffff;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px;
+}
+
+.navbar-inner {
+    padding: 12px;
+}
+
+.navbar-inner > *:not(.full-width) {
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+.navbar-inner > *:not(:first-child) {
+    margin-top: 18px;
+}
+
+.navbar-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-left-panel {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    font-size: smaller;
+}
+
+.social-links {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.social-links > a {
+    color: #000000;
+    font-size: medium;
+    cursor: pointer;
+    transition: opacity 150ms ease-in-out;
+
+    &:hover {
+        opacity: 0.75;
+    }
+}
+
+.navbar-right-panel {
+    display: flex;
+    gap: 10px;
+}
+
+.navbar-right-panel > li {
+    list-style: none;
+    font-size: small;
+    font-weight: 500;
+
+    &:not(:last-child) {
+        border-right: 1px solid #4a4452;
+        padding-right: 10px;
+    }
+}
+
+.navbar-right-panel > li > a {
+    color: #4a4452;
+    text-decoration: none;
+    cursor: pointer;
+    transition: color 150ms ease-in-out;
+
+    &:hover {
+        color: #5d4191;
+    }
+}
+
+.navbar-mid {
+    display: flex;
+    gap: 14px;
+    align-items: center;
+}
+
+.mid-left {
+    margin-right: auto;
+}
+
+.mid-left > img.logo {
+    display: block;
+    width: 180px;
+}
+
+.mid-center {
+    width: 100%;
+    max-width: 880px;
+    padding: 14px 22px;
+    line-height: 1;
+    border-radius: 28px;
+    border: 2px solid #5d4191;
+
+    display: flex;
+    gap: 14px;
+    align-items: center;
+}
+
+.mid-center > svg {
+    color: #5d4191;
+    font-size: larger;
+}
+
+.mid-center > .nav-search {
+    width: 100%;
+    border: none;
+
+    &:focus {
+        outline: 0px solid #5d4191;
+    }
+}
+
+.mid-right {
+    margin-left: auto;
+}
+
+.mid-right > a {
+    display: flex;
+    gap: 4px;
+    align-items: flex-end;
+    font-weight: 600;
+
+    color: #4a4452;
+    text-decoration: none;
+    cursor: pointer;
+    transition: color 150ms ease-in-out;
+
+    &:hover {
+        color: #5d4191;
+    }
+}
+
+.mid-right > a > span {
+    font-size: small;
+}
+
+.mid-right > a > svg {
+    font-size: larger;
+}
+
+.navbar-bottom {
+    padding-block: 8px;
+    position: sticky;
+    top: 0;
+}
+
+.navbar-menu {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    max-width: 540px;
+    margin-inline: auto;
+}
+
+.navbar-menu > li > a {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+}
+
+.navbar-menu > li:first-child > a > span {
+    font-weight: 600;
+}
+
+.navbar-menu > li > a > svg {
+    font-size: medium;
+}
+
+.navbar-menu > li > a > span {
+    font-size: small;
+}
+
+.navbar-menu > li.sign {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.navbar-menu > li.sign > div {
+    font-size: small;
+
+    &:not(:last-child) {
+        padding-right: 14px;
+        border-right: 2px solid #858585;
+    }
+}
+
+.navbar-menu > li.sign > div > a {
+    cursor: pointer;
+}
+.navbar a {
+    position: relative;
+
+    &::after {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 2px;
+        border-radius: 6px;
+        background-color: #431991;
+        bottom: -8px;
+        left: -2px;
+        transition: width 150ms ease-in-out;
+    }
+}
+
+.navbar a:hover {
+    &::after {
+        width: calc(100% + 4px);
+        transition: width 150ms ease-in-out;
+    }
+}
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal {
+    background: #fff;
+    width: 400px;
+    padding: 20px;
+    position: relative;
+    margin-left: auto;
+}
+
+.modal-content {
+    display: grid;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.modal-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    color: #333;
+}
+
+h2 {
+    color: purple;
+    font-weight: bold;
+    text-align: center;
+}
+
+.modal-options {
+    display: flex;
+    justify-content: space-between;
+}
+
+h3 {
+    color: black;
+    font-weight: bold;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+span {
+    color: black;
+}
+
+input {
+    margin-bottom: 10px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    background-color: purple;
+    color: #020000;
+    padding: 8px;
+    border: 1px solid purple;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.forgot-password a,
+.create-account a {
+    margin-top: 10px;
+    color: purple;
+    text-decoration: none;
+}
+
+.google-signin {
+    margin-left: 20px;
+    text-align: center;
+}
+
+.btn-google {
+    background-color: #ff4500; /* orange-red color */
+    color: #fff;
+    padding: 10px;
+    border: 1px solid #ff4500;
+    border-radius: 4px;
+    text-decoration: none;
+    display: inline-block;
+}
+.navbar-menu .user-info {
+    display: flex;
+    align-items: center;
+}
+.navbar-menu > li.user-info > div {
+    font-size: small;
+
+    &:not(:last-child) {
+        padding-right: 14px;
+        border-right: 2px solid #a35555;
+    }
+}
+
+.navbar-menu > li.user-info > div > button {
+    cursor: pointer;
+}
+.navbar-menu > li.user-info > div > button {
+    margin-left: 20px;
+    background-color: rgb(216, 132, 216);
+}
+.navbar-menu > li.user-info > div > span {
+    background-color: rgba(26, 137, 109, 0.627);
+}

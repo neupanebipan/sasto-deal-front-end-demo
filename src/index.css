@@ -1,0 +1,26 @@
+:root {
+    font-family:
+        DM sans,
+        Inter,
+        system-ui,
+        Avenir,
+        Helvetica,
+        Arial,
+        sans-serif;
+    line-height: 1.5;
+    font-weight: 400;
+
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+    font-family: DM sans;
+    margin: 0;
+    box-sizing: border-box;
+}
+.app {
+    background-color: #f1f1f1;
+}
