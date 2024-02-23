@@ -3,7 +3,7 @@
 ### To run the project 
 - nvm use 20
 - npm i
-- yarn install 
+- yarn install (some packages were installed using yarn and are not available in package.json)
 - npm run dev
 
 
